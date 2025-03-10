@@ -1,0 +1,39 @@
+from textwrap import wrap
+
+lst = []
+while True :
+  name = input("Enter you name:")
+  rollnumber = input("Enter your rollnumber:")
+  print("Write marks of subjects that you obtained in exam. ")
+  math = int(input("Enter your math marks(out of 100):"))
+  urdu = int(input("Enter your urdu marks(out of 100):"))
+  science = int(input("Enter your science marks(out of 100):"))
+  islamiat = int(input("Enter your islamiat marks(out of 100):"))
+  computer = int(input("Enter your computer marks(out of 100):"))
+  pst = int(input("Enter your pst marks(out of 100):"))
+  sindhi = int(input("Enter your sindhi marks(out of 100):"))
+  english = int(input("Enter your english marks(out of 100):"))
+  total_mark = math + urdu + science + islamiat + computer + sindhi +pst + english
+  max_marks =800
+  percentage = (total_mark/max_marks)*100
+  lst.append(f"Name:{name},Roll-number:{rollnumber},Math:{math},Urdu:{urdu},Science:{science},Islamiat:{islamiat},Computer:{computer},Pst:{pst},Sindhi:{sindhi},English:{english},Total marks:{total_mark} out of 800,Percentage:{percentage:.2f}%,Grade:{grade}")
+  if 80 <= percentage <= 99:
+    grade = "A+"
+    print ("Excellent work! You've scored an A+ grade. Keep up the amazing work!")
+  elif 70 <= percentage <= 79:
+    grade = "A"
+    print("Great job! You've earned an A grade. Keep aiming high!")
+  elif 60 <= percentage <= 69:
+    grade = "B"
+    print("Good effort! You've earned a C grade. With more practice, you can do even better.")
+  elif 50 <= percentage <=59:
+    grade = "C"
+    print("You passed! You've earned a D grade. Keep working hard and don't give up!")
+  else :
+    grade = "F"
+    print("Don't be discouraged! You've earned an F grade. Review your mistakes and aim for improvement next time.")
+  print(lst)
+  print(f"Record of {name} is inserted successfully. ")
+  suggestion = input ("Do you want to insert more detail.If yes then write 'Y' and if not then write 'N'. ")
+  if suggestion == "N":
+   break
